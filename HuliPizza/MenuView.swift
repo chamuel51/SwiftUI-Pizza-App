@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct MenuView: View {
+    var menu: [MenuItem]
+    @Binding var selectedItem: MenuItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(MenuCategory.allCases, id: \.self) { category in
+            Section {
+                ForEach(menu.filter{$0.category == category}){item in
+                    MenuRowView(item: item)
+                        .onTapGesture {
+                            selectedItem = item
+                        }
+                }
+            } header: {
+                Text(category.rawValue)
+            }
+        }
     }
 }
 
 #Preview {
-    MenuView()
+    MenuView(menu: MenuModel().menu, selectedItem: .constant(testMenuItem))
 }

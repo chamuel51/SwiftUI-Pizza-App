@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @EnvironmentObject var orders: OrderModel
+    @Environment(\.verticalSizeClass) var vSizeClass: UserInterfaceSizeClass?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if (vSizeClass ?? .regular) != .compact {
+                ZStack(alignment: .bottomTrailing){
+                    Image("surfBanner")
+                        .resizable()
+                        .scaledToFit()
+                    //                .scaledToFill()
+                        .ignoresSafeArea()
+                    Text("Huli Pizza Company")
+                        .font(.custom("Georgia", size: 30, relativeTo: .title))
+                    //                .foregroundStyle(Color("Sky"))
+                        .foregroundStyle(.regularMaterial)
+                        .fontWeight(.semibold)
+                }
+            } else {
+                HStack(alignment: .bottom) {
+                    Image("surfBanner")
+                        .resizable()
+                        .scaledToFit()
+                    Text("Huli Pizza Company")
+                        .font(.custom("Georgia", size: 30, relativeTo: .title))
+                    //                .foregroundStyle(Color("Sky"))
+                        .foregroundColor(Color("Surf"))
+                        .fontWeight(.heavy)
+                }
+            }
+
+        }
+        .background(.ultraThinMaterial)
     }
 }
 
 #Preview {
-    HeaderView()
+    HeaderView().environmentObject(OrderModel())
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 /// The basic unit of an order. Contains a menu item and user customization of that item.
-struct OrderItem{
+struct OrderItem: Identifiable{
     var id:Int
     var item:MenuItem
     // User customizations of the order

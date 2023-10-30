@@ -10,6 +10,8 @@
 		502A63032AEA007F00E95B7C /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A63022AEA007F00E95B7C /* StatusBarView.swift */; };
 		502A63052AEB0F4E00E95B7C /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A63042AEB0F4E00E95B7C /* OrderItemView.swift */; };
 		502A63072AEB858500E95B7C /* MenuItemTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A63062AEB858500E95B7C /* MenuItemTileView.swift */; };
+		502A63092AEB85F600E95B7C /* MenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A63082AEB85F600E95B7C /* MenuGridView.swift */; };
+		502A630B2AEB902C00E95B7C /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502A630A2AEB902C00E95B7C /* FavoriteTileView.swift */; };
 		505FAC2B2AE04AC300FEDCEF /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FAC272AE04AC300FEDCEF /* OrderModel.swift */; };
 		505FAC2C2AE04AC300FEDCEF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FAC282AE04AC300FEDCEF /* MenuItem.swift */; };
 		505FAC2D2AE04AC300FEDCEF /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FAC292AE04AC300FEDCEF /* OrderItem.swift */; };
@@ -31,6 +33,8 @@
 		502A63022AEA007F00E95B7C /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		502A63042AEB0F4E00E95B7C /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
 		502A63062AEB858500E95B7C /* MenuItemTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTileView.swift; sourceTree = "<group>"; };
+		502A63082AEB85F600E95B7C /* MenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGridView.swift; sourceTree = "<group>"; };
+		502A630A2AEB902C00E95B7C /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
 		505FAC272AE04AC300FEDCEF /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		505FAC282AE04AC300FEDCEF /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		505FAC292AE04AC300FEDCEF /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
@@ -99,7 +103,9 @@
 				50D86C3F2AD52A0600F3A8D2 /* MenuView.swift */,
 				50D86C372ACEC4B400F3A8D2 /* MenuItemView.swift */,
 				502A63062AEB858500E95B7C /* MenuItemTileView.swift */,
+				502A63082AEB85F600E95B7C /* MenuGridView.swift */,
 				50D86C392ACEC4C000F3A8D2 /* MenuRowView.swift */,
+				502A630A2AEB902C00E95B7C /* FavoriteTileView.swift */,
 				50D86C3B2ACEC4D700F3A8D2 /* OrderRowView.swift */,
 				50D86C3D2ACEC4E400F3A8D2 /* HeaderView.swift */,
 				505FAC262AE04AC300FEDCEF /* Model Code */,
@@ -189,6 +195,7 @@
 			files = (
 				50D86C342ACEC17500F3A8D2 /* OrderView.swift in Sources */,
 				50D46B572ACBAE7C00D576F7 /* ContentView.swift in Sources */,
+				502A630B2AEB902C00E95B7C /* FavoriteTileView.swift in Sources */,
 				505FAC2B2AE04AC300FEDCEF /* OrderModel.swift in Sources */,
 				50D46B552ACBAE7C00D576F7 /* HuliPizzaApp.swift in Sources */,
 				50D86C402AD52A0600F3A8D2 /* MenuView.swift in Sources */,
@@ -199,6 +206,7 @@
 				50D86C3C2ACEC4D700F3A8D2 /* OrderRowView.swift in Sources */,
 				505FAC2E2AE04AC300FEDCEF /* MenuModel.swift in Sources */,
 				502A63032AEA007F00E95B7C /* StatusBarView.swift in Sources */,
+				502A63092AEB85F600E95B7C /* MenuGridView.swift in Sources */,
 				505FAC2C2AE04AC300FEDCEF /* MenuItem.swift in Sources */,
 				50D86C382ACEC4B400F3A8D2 /* MenuItemView.swift in Sources */,
 				502A63072AEB858500E95B7C /* MenuItemTileView.swift in Sources */,

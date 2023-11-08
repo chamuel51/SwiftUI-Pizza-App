@@ -14,28 +14,41 @@ struct ContentView: View {
     @State var presentGrid: Bool = false
     @State private var selectedItem: MenuItem = noMenuItem
     var body: some View {
-        VStack {
-            HeaderView()
-                .shadow(radius: 5)
-                .environment(\.colorScheme, .light)
-            
-            StatusBarView(showOrders: $showOrders, showGrid: $presentGrid)
-            
-            if showOrders {
+        TabView {
+            VStack{
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                
+                StatusBarView(showOrders: $showOrders, showGrid: $presentGrid)
+                
+//                MenuItemView(item: $selectedItem, orders: orders)
+//                    .padding(5)
+//                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
+//                if presentGrid {
+//                    MenuGridView(menu: menu, selectedItem: $selectedItem)
+//                } else {
+//                    
+//                    MenuView(menu: menu, selectedItem: $selectedItem)
+//                }
+                MenuView2(menu: menu)
+            }.tabItem {
+                Label("Menu", systemImage: "list.bullet")
+            }
+            VStack{
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                StatusBarView(showOrders: $showOrders, showGrid: $presentGrid)
+                
                 OrderView(orders: orders)
                     .cornerRadius(10)
-            } else {
-                MenuItemView(item: $selectedItem, orders: orders)
-                    .padding(5)
-                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
-                if presentGrid {
-                    MenuGridView(menu: menu, selectedItem: $selectedItem)
-                } else {
-                    
-                    MenuView(menu: menu, selectedItem: $selectedItem)
-                }
+                
+            }.tabItem {
+                Label("Order", systemImage: "cart")
             }
-            Spacer()
+            
+//            Spacer()
         }
         .padding()
         .background(.linearGradient(colors: [.cyan, Color("Surf"), .white], startPoint: .topLeading, endPoint: .bottom))

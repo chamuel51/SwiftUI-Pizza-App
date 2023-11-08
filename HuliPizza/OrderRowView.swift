@@ -13,9 +13,14 @@ struct OrderRowView: View {
         VStack(alignment:.leading) {
             HStack {
                 Text(order.item.name)
+                Text("- " + order.preferredCrust.rawValue)
+                if order.extraIngredients {
+                    Image(systemName: "2.circle")
+                }
                 Spacer()
+                Text(order.name)
             }
-                
+            
             HStack(alignment : .firstTextBaseline){
                 Text(order.quantity, format: .number)
                 Text(order.item.price, format: .currency(code: "USD"))
@@ -24,7 +29,6 @@ struct OrderRowView: View {
                     .fontWeight(.semibold)
             }
         }
-        
     }
 }
 
